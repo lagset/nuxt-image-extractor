@@ -23,6 +23,12 @@ It parses each generated page, downloads its images from your CMS API, stores th
 yarn add nuxt-image-extractor # or npm install nuxt-image-extractor
 ```
 
+or directly add this github repo (not thorougly tested!)
+```bash
+npm install lagset/nuxt-image-extractor
+```
+
+
 2. Add `nuxt-image-extractor` to the `modules` section of `nuxt.config.js`
 
 ```js
@@ -40,6 +46,8 @@ yarn add nuxt-image-extractor # or npm install nuxt-image-extractor
     	// (Optional) Array containing image formats
     	extensions: ['jpg', 'jpeg', 'gif', 'png', 'webp', 'svg'],
       }
+      // (Optional) Whether to download media files only appearing in payload.js/state.js files
+      downloadPayloadMedia: true
     ]
   ]
 }
